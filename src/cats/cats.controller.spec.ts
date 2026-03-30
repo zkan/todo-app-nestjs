@@ -18,7 +18,8 @@ describe('CatsController', () => {
 
   describe('root', () => {
     it('should return "This action returns all cats"', () => {
-      expect(controller.findAll()).toBe('This action returns all cats');
+      expected = { message: 'This action returns all cats' };
+      expect(controller.findAll()).toStrictEqual(expected);
     });
   });
 });
