@@ -15,4 +15,10 @@ describe('CatsController', () => {
   it('should be defined', () => {
     expect(controller).toBeDefined();
   });
+
+  describe('root', () => {
+    it('should return "This action returns all cats"', () => {
+      expect(controller.findAll()).toBe('This action returns all cats');
+    });
+  });
 });
