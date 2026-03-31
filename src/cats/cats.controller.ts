@@ -16,7 +16,7 @@ export class CatsController {
 
   @Post()
   async create(@Body() createCatDto: CreateCatDto) {
-    console.log(createCatDto)
+    console.log(createCatDto);
     return 'This action adds a new cat';
   }
 }
