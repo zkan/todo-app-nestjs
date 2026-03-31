@@ -1,0 +1,23 @@
+info:
+  name: Create a cat
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://localhost:3000/cats
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Salee",
+        "age": 10,
+        "breed": "TH"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
