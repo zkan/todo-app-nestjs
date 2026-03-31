@@ -31,8 +31,10 @@ describe('CatsController', () => {
   });
 
   describe('create', () => {
-    it('should return "This action adds a new cat"', () => {
-      expect(controller.create()).toBe('This action adds a new cat');
+    it('should return "This action adds a new cat"', async () => {
+      expect(
+        await controller.create({ name: 'test', age: 1, breed: 'mixed' }),
+      ).toBe('This action adds a new cat');
     });
   });
 });

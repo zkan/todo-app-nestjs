@@ -38,6 +38,7 @@ describe('CatsController (e2e)', () => {
     it('should create a new cat', () => {
       return request(app.getHttpServer())
         .post('/cats')
+        .send({ name: 'test', age: 1, breed: 'mixed' })
         .expect(201)
         .expect('This action adds a new cat');
     });
