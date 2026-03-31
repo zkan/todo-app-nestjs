@@ -29,4 +29,10 @@ describe('CatsController', () => {
       expect(controller.findAll()).toStrictEqual(expected);
     });
   });
+
+  describe('create', () => {
+    it('should return "This action adds a new cat"', () => {
+      expect(controller.create()).toBe('This action adds a new cat');
+    });
+  });
 });
