@@ -18,10 +18,7 @@ describe('CatsController (e2e)', () => {
 
   describe('/cats (GET)', () => {
     it('should return all cats', () => {
-      return request(app.getHttpServer())
-        .get('/cats')
-        .expect(200)
-        .expect({ message: 'This action returns all cats' });
+      return request(app.getHttpServer()).get('/cats').expect(200).expect([]);
     });
   });
 
@@ -40,7 +37,7 @@ describe('CatsController (e2e)', () => {
         .post('/cats')
         .send({ name: 'test', age: 1, breed: 'mixed' })
         .expect(201)
-        .expect('This action adds a new cat');
+        .expect('');
     });
   });
 });
