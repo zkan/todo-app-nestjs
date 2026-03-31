@@ -16,9 +16,16 @@ describe('CatsController', () => {
     expect(controller).toBeDefined();
   });
 
+  describe('findOne', () => {
+    it('should return a cat by id', () => {
+      const params = { id: '1' };
+      expect(controller.findOne(params)).toBe('This action returns a #1 cat');
+    });
+  });
+
   describe('root', () => {
     it('should return "This action returns all cats"', () => {
-      expected = { message: 'This action returns all cats' };
+      const expected = { message: 'This action returns all cats' };
       expect(controller.findAll()).toStrictEqual(expected);
     });
   });
