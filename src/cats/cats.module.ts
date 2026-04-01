@@ -7,4 +7,3 @@ import { CatsService } from './cats.service';
   providers: [CatsService],
 })
 export class CatsModule {}
-
